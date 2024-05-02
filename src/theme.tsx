@@ -1,43 +1,43 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 export const lightTheme = createTheme({
   palette: {
-    mode: 'light', 
+    mode: "light",
     primary: {
-      main: '#000',
+      main: "#EEEEEE",
     },
     secondary: {
-      main: '#000',
+      main: "#fff",
     },
     background: {
-      default: '#fff',
+      default: "#fff",
     },
     text: {
-      primary: '#000000',
+      primary: "#000",
     },
   },
   typography: {
-    fontFamily: 'Roboto, sans-serif',
+    fontFamily: "Roboto, sans-serif",
   },
 });
 
 export const darkTheme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: "dark",
     primary: {
-      main: '#000',
+      main: "#212121",
     },
     secondary: {
-      main: '#000',
+      main: "#EEEEEE",
     },
     background: {
-      default: '#111', 
+      default: "#616161",
     },
     text: {
-      primary: '#000', 
+      primary: "#EEEEEE",
     },
   },
   typography: {
-    fontFamily: 'Roboto, sans-serif',
+    fontFamily: "Roboto, sans-serif",
   },
 });

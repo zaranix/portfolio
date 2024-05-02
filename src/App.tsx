@@ -1,5 +1,6 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { useState } from "react";
+import Background from "./components/Background";
 import NavBar from "./components/NavBar";
 import { darkTheme, lightTheme } from "./theme";
 
@@ -13,10 +14,14 @@ const App = () => {
 
   return (
     <ThemeProvider theme={selectedTheme}>
+      <Background />
       <CssBaseline />
-      <NavBar toggleDarkMode={toggleDarkMode} toggleDarkTheme={toggleDarkTheme} />
+
+      <NavBar
+        toggleDarkMode={toggleDarkMode}
+        toggleDarkTheme={toggleDarkTheme}
+      />
     </ThemeProvider>
   );
-}
-
-export default App
+};
+export default App;
