@@ -21,14 +21,21 @@ const NavBar = ({ toggleDarkMode, toggleDarkTheme }: Props) => {
   const [state, setState] = useState(false);
 
   return (
-    <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+    <Toolbar
+      sx={{
+        position: "absolute",
+        display: "flex",
+        justifyContent: "space-between",
+        width: "100%",
+      }}
+    >
       <IconButton
-        size="large"
         edge="end"
         aria-label="menu"
+        sx={{ order: 2 }}
         onClick={() => setState(true)}
       >
-        <MenuIcon />
+        <MenuIcon sx={{ fontSize: "3rem" }} />
       </IconButton>
       <ColorModeSwitch
         toggleDarkMode={toggleDarkMode}

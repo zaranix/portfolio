@@ -14,13 +14,13 @@ const App = () => {
 
   return (
     <ThemeProvider theme={selectedTheme}>
-      <Background />
       <CssBaseline />
 
       <NavBar
         toggleDarkMode={toggleDarkMode}
         toggleDarkTheme={toggleDarkTheme}
       />
+      <Background theme={selectedTheme} />
     </ThemeProvider>
   );
 };

@@ -9,12 +9,11 @@ export const lightTheme = createTheme({
     secondary: {
       main: "#fff",
     },
-    background: {
-      default: "#fff",
-    },
+
     text: {
       primary: "#000",
     },
+    background: { default: "#F56539", paper: "#fff" },
   },
   typography: {
     fontFamily: "Roboto, sans-serif",
@@ -31,7 +30,8 @@ export const darkTheme = createTheme({
       main: "#EEEEEE",
     },
     background: {
-      default: "#616161",
+      default: "#F56539",
+      paper: "#212121",
     },
     text: {
       primary: "#EEEEEE",

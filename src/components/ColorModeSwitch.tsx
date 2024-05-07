@@ -5,19 +5,16 @@ interface Props {
   toggleDarkTheme: () => void;
 }
 
-const ColorModeSwitch = ({ toggleDarkMode, toggleDarkTheme } : Props) => {
-
+const ColorModeSwitch = ({ toggleDarkMode, toggleDarkTheme }: Props) => {
   return (
-  
-  
-  <div style={{display:'flex' , alignItems:'center'}}>
-        <h3>Dark mode</h3>
-        <Switch checked={toggleDarkMode} onChange={toggleDarkTheme} />
-  </div>
- 
-     
-    
+    <div style={{ display: "flex", alignItems: "center" }}>
+      <Switch
+        size="medium"
+        checked={toggleDarkMode}
+        onChange={toggleDarkTheme}
+      />
+    </div>
   );
-}
+};
 
 export default ColorModeSwitch;
