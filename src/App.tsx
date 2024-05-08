@@ -22,7 +22,7 @@ const App = () => {
         toggleDarkTheme={toggleDarkTheme}
       />
       <Background theme={selectedTheme} />
-      <Education></Education>
+      <Education theme={selectedTheme}></Education>
     </ThemeProvider>
   );
 };

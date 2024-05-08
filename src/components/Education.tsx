@@ -1,15 +1,36 @@
 import { Grid } from "@mui/material";
 import EducationItem from "./EducationItem";
 import education from "/home/zaranix/portfolio/src/assets/Images/eduImg.svg";
+import educationorg from "/home/zaranix/portfolio/src/assets/Images/eduOrange.svg";
 
-const Education = () => {
+interface Theme {
+  palette: {
+    background: { default: string; paper: string };
+    text: { primary: string; secondary: string };
+  };
+}
+interface Props {
+  theme: Theme;
+}
+
+const Education = ({ theme }: Props) => {
   return (
     <Grid
-      sx={{ backgroundColor: "#212121", height: "100vh", paddingLeft: "6%" }}
+      sx={{
+        backgroundColor: theme.palette.background.paper,
+        height: "100vh",
+        display: "flex",
+        alignItems: "center",
+        paddingLeft: "6%",
+        marginTop: "0",
+      }}
       container
+      spacing={2}
     >
-      <Grid md={6}>
-        <h1 style={{ marginLeft: "1rem" }}>Education</h1>
+      <Grid item sx={{ justifyContent: "center" }} md={7}>
+        <h1 style={{ marginLeft: "1rem", color: "#f56539", fontSize: "3rem" }}>
+          Education
+        </h1>
         <EducationItem
           date="2007-2020"
           title="Higher Secondary Education"
@@ -29,7 +50,22 @@ const Education = () => {
           imageUrl={education}
         />
       </Grid>
-      <Grid md={6}>2</Grid>
+      <Grid
+        style={{ display: "flex", justifyContent: "center" }}
+        item
+        md={5}
+        xs={12}
+        sm={5}
+      >
+        <img
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+          }}
+          src={educationorg}
+          alt=""
+        />
+      </Grid>
     </Grid>
   );
 };

@@ -11,8 +11,8 @@ const EducationItem = ({ date, title, school, imageUrl }: Props) => {
       style={{
         background: "#8b422d",
         display: "flex",
-        padding: "1rem",
-        borderRadius: "10px",
+        padding: "2rem",
+        borderRadius: "15px",
         margin: "1rem",
       }}
     >
