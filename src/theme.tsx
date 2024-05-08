@@ -12,6 +12,7 @@ export const lightTheme = createTheme({
 
     text: {
       primary: "#000",
+      secondary: "#A7A7A7",
     },
     background: { default: "#F56539", paper: "#fff" },
   },

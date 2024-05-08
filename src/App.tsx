@@ -1,6 +1,7 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { useState } from "react";
 import Background from "./components/Background";
+import Education from "./components/Education";
 import NavBar from "./components/NavBar";
 import { darkTheme, lightTheme } from "./theme";
 
@@ -21,6 +22,7 @@ const App = () => {
         toggleDarkTheme={toggleDarkTheme}
       />
       <Background theme={selectedTheme} />
+      <Education></Education>
     </ThemeProvider>
   );
 };
