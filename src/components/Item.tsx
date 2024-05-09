@@ -5,7 +5,7 @@ interface Props {
   imageUrl: string;
 }
 
-const EducationItem = ({ date, title, school, imageUrl }: Props) => {
+const Item = ({ date, title, school, imageUrl }: Props) => {
   return (
     <div
       style={{
@@ -19,12 +19,12 @@ const EducationItem = ({ date, title, school, imageUrl }: Props) => {
       <img
         style={{
           borderRadius: "50%",
-          width: "45px",
-          height: "45px",
+          width: "50px",
+          height: "50px",
           display: "flex",
           marginRight: "0.5rem",
           backgroundColor: "#F56539",
-          padding: "0.4rem",
+          padding: "0.65rem",
         }}
         src={imageUrl}
         alt=""
@@ -38,4 +38,4 @@ const EducationItem = ({ date, title, school, imageUrl }: Props) => {
   );
 };
 
-export default EducationItem;
+export default Item;

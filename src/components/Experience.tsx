@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import Item from "./Item";
-import education from "/home/zaranix/portfolio/src/assets/Images/eduImg.svg";
 import educationorg from "/home/zaranix/portfolio/src/assets/Images/eduOrange.svg";
+import experience from "/home/zaranix/portfolio/src/assets/Images/exp.svg";
 
 interface Theme {
   palette: {
@@ -13,7 +13,7 @@ interface Props {
   theme: Theme;
 }
 
-const Education = ({ theme }: Props) => {
+const Experience = ({ theme }: Props) => {
   return (
     <Grid
       sx={{
@@ -23,31 +23,34 @@ const Education = ({ theme }: Props) => {
         alignItems: "center",
         paddingLeft: "6%",
         marginTop: "0",
+        flexDirection: "row-reverse",
       }}
       container
       spacing={2}
     >
       <Grid item sx={{ justifyContent: "center" }} md={7}>
-        <h1 style={{ marginLeft: "1rem", color: "#f56539", fontSize: "3rem" }}>
-          Education
+        <h1
+          style={{ marginLeft: "1rem", color: "#f56539", fontSize: "3.5rem" }}
+        >
+          Experience
         </h1>
         <Item
           date="2007-2020"
-          title="Higher Secondary Education"
+          title="scrum master"
           school="Marble Hills Middle School"
-          imageUrl={education}
+          imageUrl={experience}
         />
         <Item
           date="2007-2020"
-          title="Higher Secondary Education"
+          title="frontend developer"
           school="Marble Hills Middle School"
-          imageUrl={education}
+          imageUrl={experience}
         />
         <Item
           date="2007-2020"
-          title="Higher Secondary Education"
+          title="backend developer"
           school="Marble Hills Middle School"
-          imageUrl={education}
+          imageUrl={experience}
         />
       </Grid>
       <Grid
@@ -70,4 +73,4 @@ const Education = ({ theme }: Props) => {
   );
 };
 
-export default Education;
+export default Experience;
