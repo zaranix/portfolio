@@ -16,3 +16,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation16.MuiDrawer-paper.MuiDrawer-paperAnchorLeft.css-1k3jy22-MuiPaper-root-MuiDrawer-paper {
+  border-radius: 0 20px 20px 0;
+}

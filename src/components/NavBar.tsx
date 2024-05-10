@@ -1,3 +1,4 @@
+import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
   Box,
@@ -11,7 +12,6 @@ import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
 import { useState } from "react";
 import ColorModeSwitch from "./ColorModeSwitch";
-import Resume from "./Resume";
 
 interface Props {
   toggleDarkMode: boolean;
@@ -36,6 +36,7 @@ const NavBar = ({ toggleDarkMode, toggleDarkTheme }: Props) => {
         display: "flex",
         justifyContent: "space-between",
         width: "100%",
+        borderTopRightRadius: "20px",
       }}
     >
       <IconButton
@@ -50,23 +51,46 @@ const NavBar = ({ toggleDarkMode, toggleDarkTheme }: Props) => {
         toggleDarkMode={toggleDarkMode}
         toggleDarkTheme={toggleDarkTheme}
       />
+
       <Drawer
         anchor="left"
         variant="temporary"
         open={state}
         onClose={() => setState(false)}
       >
-        <Box sx={{ width: "30vw" }}>
+        <Box
+          sx={{
+            width: "20rem",
+            height: "100vh",
+            backgroundColor: "#212121",
+            borderTopRightRadius: "20px",
+          }}
+        >
+          <CloseIcon
+            onClick={() => setState(false)}
+            fontSize="large"
+            sx={{
+              color: "#F56539",
+              display: "block",
+              margin: "2rem 1rem 1rem auto",
+            }}
+          />
           <List>
             {["Home", "Skill", "Experience", "Education", "Contact"].map(
               (text) => (
-                <ListItem key={text} disablePadding>
+                <ListItem sx={{ width: "300px", margin: "0 auto" }} key={text}>
                   <ListItemButton
+                    sx={{
+                      border: "solid 3px #F56539",
+                      borderRadius: "30px",
+                      color: "#F56539",
+                      margin: "1rem",
+                      textAlign: "center",
+                    }}
                     onClick={() => {
                       scrollToExperience(text);
                     }}
                   >
-                    {text === "Resume" && <Resume />}
                     <ListItemText primary={text} />
                   </ListItemButton>
                 </ListItem>
