@@ -1,7 +1,7 @@
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import Grid from "@mui/material/Grid";
+import CustomizedButtons from "./Button.tsx";
 import zahra from "/home/zaranix/portfolio/src/assets/Images/zahra.jpeg";
-
 interface Theme {
   palette: {
     background: { default: string; paper: string };
@@ -69,6 +69,7 @@ const Background = ({ theme }: Props) => {
               of clouds, but came with these. She knew what was coming and she
               hoped she was prepared.
             </h3>
+            <CustomizedButtons></CustomizedButtons>
           </div>
         </Grid>
       </Grid>

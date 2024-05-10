@@ -2,7 +2,6 @@ import { Grid } from "@mui/material";
 import Item from "./Item";
 import educationorg from "/home/zaranix/portfolio/src/assets/Images/eduOrange.svg";
 import experience from "/home/zaranix/portfolio/src/assets/Images/exp.svg";
-
 interface Theme {
   palette: {
     background: { default: string; paper: string };
