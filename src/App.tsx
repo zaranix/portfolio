@@ -3,7 +3,7 @@ import { useState } from "react";
 import Background from "./components/Background";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
-import Marquee from "./components/Marquee";
+import Skill from "./components/Marquee";
 import NavBar from "./components/NavBar";
 import { darkTheme, lightTheme } from "./theme";
 
@@ -27,7 +27,7 @@ const App = () => {
       <Background theme={selectedTheme} />
       <Education theme={selectedTheme}></Education>
       <Experience theme={selectedTheme}></Experience>
-      <Marquee theme={selectedTheme} />
+      <Skill theme={selectedTheme} />
     </ThemeProvider>
   );
 };

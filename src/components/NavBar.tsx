@@ -20,6 +20,15 @@ interface Props {
 const NavBar = ({ toggleDarkMode, toggleDarkTheme }: Props) => {
   const [state, setState] = useState(false);
 
+  const scrollToExperience = (text: string) => {
+    const experienceSection = document.getElementById(text.toLowerCase());
+
+    if (experienceSection) {
+      experienceSection.scrollIntoView({ behavior: "smooth" });
+      setState(false);
+    }
+  };
+
   return (
     <Toolbar
       sx={{
@@ -49,14 +58,20 @@ const NavBar = ({ toggleDarkMode, toggleDarkTheme }: Props) => {
       >
         <Box sx={{ width: "30vw" }}>
           <List>
-            {["Home", "Resume", "Work", "Education", "Contact"].map((text) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  {text === "Resume" && <Resume />}
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
+            {["Home", "Skill", "Experience", "Education", "Contact"].map(
+              (text) => (
+                <ListItem key={text} disablePadding>
+                  <ListItemButton
+                    onClick={() => {
+                      scrollToExperience(text);
+                    }}
+                  >
+                    {text === "Resume" && <Resume />}
+                    <ListItemText primary={text} />
+                  </ListItemButton>
+                </ListItem>
+              )
+            )}
           </List>
         </Box>
       </Drawer>

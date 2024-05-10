@@ -16,6 +16,7 @@ interface Props {
 const Education = ({ theme }: Props) => {
   return (
     <Grid
+      id="education"
       sx={{
         backgroundColor: theme.palette.background.paper,
         height: "100vh",

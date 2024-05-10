@@ -22,9 +22,10 @@ interface Props {
   theme: Theme;
 }
 
-const Marquee = ({ theme }: Props) => {
+const Skill = ({ theme }: Props) => {
   return (
     <Grid
+      id="skill"
       sx={{
         backgroundColor: theme.palette.background.paper,
         height: "100vh",
@@ -58,4 +59,4 @@ const Marquee = ({ theme }: Props) => {
   );
 };
 
-export default Marquee;
+export default Skill;
