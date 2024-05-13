@@ -33,21 +33,15 @@ const Education = ({ theme }: Props) => {
           Education
         </h1>
         <Item
-          date="2007-2020"
-          title="Higher Secondary Education"
-          school="Marble Hills Middle School"
+          date="Sep 2016 - Feb 2021"
+          title="Bachelor’s Degree In Computer Engineering"
+          school="Hamadan University of Technology"
           imageUrl={education}
         />
         <Item
-          date="2007-2020"
-          title="Higher Secondary Education"
-          school="Marble Hills Middle School"
-          imageUrl={education}
-        />
-        <Item
-          date="2007-2020"
-          title="Higher Secondary Education"
-          school="Marble Hills Middle School"
+          date="Apr 2023 - Ongoing"
+          title="Master’s Degree In Computer Science"
+          school="RPTU"
           imageUrl={education}
         />
       </Grid>

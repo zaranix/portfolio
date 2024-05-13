@@ -35,21 +35,27 @@ const Experience = ({ theme }: Props) => {
           Experience
         </h1>
         <Item
-          date="2007-2020"
-          title="scrum master"
-          school="Marble Hills Middle School"
+          date="Jul 2016 - Apr 2020"
+          title="Insurance agent"
+          school="Pasargad Insurance Agency"
           imageUrl={experience}
         />
         <Item
-          date="2007-2020"
-          title="frontend developer"
-          school="Marble Hills Middle School"
+          date="Oct 2020 - Oct 2021"
+          title="Real estate agent"
+          school="Dolati Real Estate Agency"
           imageUrl={experience}
         />
         <Item
-          date="2007-2020"
-          title="backend developer"
-          school="Marble Hills Middle School"
+          date="Jun 2021 - Dec 2021"
+          title="Front-end Developer (Internship)"
+          school="Shahre Wordpress"
+          imageUrl={experience}
+        />
+        <Item
+          date="Jul 2022 - Jul 2023"
+          title="Front-end Developer"
+          school="Kian Development Holding (Abzar Wordpress)"
           imageUrl={experience}
         />
       </Grid>
