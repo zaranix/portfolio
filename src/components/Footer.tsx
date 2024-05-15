@@ -7,6 +7,7 @@ const Footer = () => {
   return (
     <div>
       <Grid
+        id="contact"
         sx={{ background: "#8B422D" }}
         container
         spacing={4}

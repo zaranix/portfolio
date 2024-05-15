@@ -1,7 +1,7 @@
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
-import pdf from "/home/zaranix/portfolio/src/assets/Pdf/Minimal_CV.pdf";
+import pdf from "/home/zaranix/portfolio/src/assets/Pdf/CV.pdf";
 
 const CustomButton = styled(Button)({
   boxShadow: "none",
@@ -33,14 +33,21 @@ const ColorButton = styled(Button)(() => ({
     color: "#000",
   },
 }));
+const handleClick = () => {
+  const contact = document.getElementById("contact");
+  contact?.scrollIntoView({ behavior: "smooth" });
+};
 
 export default function CustomizedButtons() {
   return (
     <Stack sx={{ marginTop: "1rem" }} spacing={2} direction="row">
-      <ColorButton variant="contained" href={pdf} formTarget="_blank">
-        Download CV
-      </ColorButton>
-      <CustomButton variant="contained">Contact</CustomButton>
+      <a href={pdf} target="_blank">
+        <ColorButton variant="contained"> Download CV</ColorButton>
+      </a>
+
+      <CustomButton variant="contained" onClick={() => handleClick()}>
+        Contact
+      </CustomButton>
     </Stack>
   );
 }
