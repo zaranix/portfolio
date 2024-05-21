@@ -1,3 +1,4 @@
+import { useMediaQuery, useTheme } from "@mui/material";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
@@ -7,7 +8,7 @@ const CustomButton = styled(Button)({
   boxShadow: "none",
   textTransform: "none",
   fontSize: 16,
-  padding: "8px 16px",
+
   border: "1px solid",
   borderRadius: "20px",
   lineHeight: 1.5,
@@ -39,10 +40,18 @@ const handleClick = () => {
 };
 
 export default function CustomizedButtons() {
+  const them = useTheme();
+  const isXs = useMediaQuery(them.breakpoints.down("sm"));
   return (
     <Stack sx={{ marginTop: "1rem" }} spacing={2} direction="row">
       <a href={pdf} target="_blank">
-        <ColorButton variant="contained"> Download CV</ColorButton>
+        <ColorButton
+          sx={{ padding: isXs ? "6px 11px" : "6px 16px" }}
+          variant="contained"
+        >
+          {" "}
+          Download CV
+        </ColorButton>
       </a>
 
       <CustomButton variant="contained" onClick={() => handleClick()}>

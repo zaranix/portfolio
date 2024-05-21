@@ -1,22 +1,58 @@
-import { Grid } from "@mui/material";
+import { Grid, Grow, useMediaQuery, useTheme } from "@mui/material";
+import { useCallback, useRef, useState } from "react";
 import Item from "./Item";
 import education from "/home/zaranix/portfolio/src/assets/Images/eduImg.svg";
 import educationorg from "/home/zaranix/portfolio/src/assets/Images/eduOrange.svg";
 
-interface Theme {
-  palette: {
-    background: { default: string; paper: string };
-    text: { primary: string; secondary: string };
-  };
-}
-interface Props {
-  theme: Theme;
-}
+const items = [
+  {
+    date: "2014 - 2018",
+    title: "Bachelor of Science in Computer Engineering",
+    school: "University of Tehran",
+    imageUrl: education,
+  },
+  {
+    date: "2018 - 2020",
+    title: "Master of Science in Computer Engineering",
+    school: "University of Tehran",
+    imageUrl: education,
+  },
+];
 
-const Education = ({ theme }: Props) => {
+const Education = () => {
+  const theme = useTheme();
+  const [visible, setVisible] = useState(false);
+
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  const setRef = useCallback((node: HTMLDivElement | null) => {
+    if (observerRef.current) {
+      observerRef.current.disconnect();
+    }
+
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true);
+          } else {
+            setVisible(false);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (node) {
+      observerRef.current.observe(node);
+    }
+  }, []);
+  const them = useTheme();
+  const isXs = useMediaQuery(them.breakpoints.down("sm"));
   return (
     <Grid
       id="education"
+      ref={setRef}
       sx={{
         backgroundColor: theme.palette.background.paper,
         height: "100vh",
@@ -32,18 +68,25 @@ const Education = ({ theme }: Props) => {
         <h1 style={{ marginLeft: "1rem", color: "#f56539", fontSize: "3rem" }}>
           Education
         </h1>
-        <Item
-          date="Sep 2016 - Feb 2021"
-          title="Bachelor’s Degree In Computer Engineering"
-          school="Hamadan University of Technology"
-          imageUrl={education}
-        />
-        <Item
-          date="Apr 2023 - Ongoing"
-          title="Master’s Degree In Computer Science"
-          school="RPTU"
-          imageUrl={education}
-        />
+
+        {items.map((item, index) => (
+          <Grow
+            key={index}
+            in={visible}
+            timeout={{
+              enter: 1000 + index * 500, // Delay each item by 500ms after the previous one
+            }}
+          >
+            <div>
+              <Item
+                date={item.date}
+                title={item.title}
+                school={item.school}
+                imageUrl={item.imageUrl}
+              />
+            </div>
+          </Grow>
+        ))}
       </Grid>
       <Grid
         style={{ display: "flex", justifyContent: "center" }}
@@ -54,7 +97,7 @@ const Education = ({ theme }: Props) => {
       >
         <img
           style={{
-            maxWidth: "100%",
+            maxWidth: isXs ? "70vw" : "100%",
             height: "auto",
           }}
           src={educationorg}

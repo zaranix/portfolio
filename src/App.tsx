@@ -26,10 +26,10 @@ const App = () => {
         toggleDarkTheme={toggleDarkTheme}
       />
 
-      <Background theme={selectedTheme} />
-      <Education theme={selectedTheme}></Education>
-      <Experience theme={selectedTheme}></Experience>
-      <Skill theme={selectedTheme} />
+      <Background />
+      <Education></Education>
+      <Experience></Experience>
+      <Skill />
 
       <Footer></Footer>
     </ThemeProvider>

@@ -1,21 +1,12 @@
+import { useTheme } from "@material-ui/core/styles";
 import { Grid, Grow } from "@mui/material";
 import { useCallback, useRef, useState } from "react";
 import Item from "./Item";
 import educationorg from "/home/zaranix/portfolio/src/assets/Images/eduOrange.svg";
 import experience from "/home/zaranix/portfolio/src/assets/Images/exp.svg";
 
-interface Theme {
-  palette: {
-    background: { default: string; paper: string };
-    text: { primary: string; secondary: string };
-  };
-}
-
-interface Props {
-  theme: Theme;
-}
-
-const Experience = ({ theme }: Props) => {
+const Experience = () => {
+  const theme = useTheme();
   const [visible, setVisible] = useState(false);
 
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -82,6 +73,7 @@ const Experience = ({ theme }: Props) => {
         paddingLeft: "6%",
         marginTop: "0",
         flexDirection: "row-reverse",
+        overflow: "hidden",
       }}
       container
       spacing={2}

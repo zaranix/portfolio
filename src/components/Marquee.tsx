@@ -1,3 +1,4 @@
+import { useTheme } from "@material-ui/core/styles";
 import { Box, Grid } from "@mui/material";
 import FastMarquee from "react-fast-marquee";
 import SkillBox from "./SkillBox";
@@ -12,17 +13,8 @@ import react from "/home/zaranix/portfolio/src/assets/Images/react.svg";
 import typescript from "/home/zaranix/portfolio/src/assets/Images/typescript.svg";
 import wordpress from "/home/zaranix/portfolio/src/assets/Images/wordpress.svg";
 
-interface Theme {
-  palette: {
-    background: { default: string; paper: string };
-    text: { primary: string; secondary: string };
-  };
-}
-interface Props {
-  theme: Theme;
-}
-
-const Skill = ({ theme }: Props) => {
+const Skill = () => {
+  const theme = useTheme();
   return (
     <Grid
       id="skill"
