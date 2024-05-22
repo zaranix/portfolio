@@ -1,5 +1,4 @@
-import { useTheme } from "@material-ui/core/styles";
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, useTheme } from "@mui/material";
 import FastMarquee from "react-fast-marquee";
 import SkillBox from "./SkillBox";
 import css from "/home/zaranix/portfolio/src/assets/Images/css.svg";

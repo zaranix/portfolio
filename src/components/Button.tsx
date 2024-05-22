@@ -4,33 +4,13 @@ import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 import pdf from "/home/zaranix/portfolio/src/assets/Pdf/CV.pdf";
 
-const CustomButton = styled(Button)({
-  boxShadow: "none",
-  textTransform: "none",
-  fontSize: 16,
-
-  border: "1px solid",
-  borderRadius: "20px",
-  lineHeight: 1.5,
-  backgroundColor: "#212121",
-  borderColor: "#F56539",
-  "&:hover": {
-    backgroundColor: "#EAEAEA",
-    borderColor: "#F56539",
-    boxShadow: "none",
-    color: "#000",
-  },
-  "&:focus": {
-    boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
-  },
-});
-
 const ColorButton = styled(Button)(() => ({
-  backgroundColor: "#F56539",
   borderRadius: "20px",
+  border: "1px solid",
+
   "&:hover": {
     backgroundColor: "#EAEAEA",
-    borderColor: "#F56539",
+
     color: "#000",
   },
 }));
@@ -40,13 +20,17 @@ const handleClick = () => {
 };
 
 export default function CustomizedButtons() {
-  const them = useTheme();
-  const isXs = useMediaQuery(them.breakpoints.down("sm"));
+  const theme = useTheme();
+  const isXs = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <Stack sx={{ marginTop: "1rem" }} spacing={2} direction="row">
       <a href={pdf} target="_blank">
         <ColorButton
-          sx={{ padding: isXs ? "6px 11px" : "6px 16px" }}
+          sx={{
+            padding: isXs ? "6px 11px" : "6px 16px",
+            backgroundColor: theme.palette.background.default,
+            borderColor: theme.palette.background.default,
+          }}
           variant="contained"
         >
           {" "}
@@ -54,9 +38,16 @@ export default function CustomizedButtons() {
         </ColorButton>
       </a>
 
-      <CustomButton variant="contained" onClick={() => handleClick()}>
+      <ColorButton
+        sx={{
+          backgroundColor: theme.palette.background.paper,
+          borderColor: theme.palette.background.default,
+        }}
+        variant="contained"
+        onClick={() => handleClick()}
+      >
         Contact
-      </CustomButton>
+      </ColorButton>
     </Stack>
   );
 }

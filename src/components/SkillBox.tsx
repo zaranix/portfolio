@@ -1,14 +1,15 @@
-import { Box } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 
 interface Props {
   skill: string;
   imageUrl: string;
 }
 const SkillBox = ({ skill, imageUrl }: Props) => {
+  const theme = useTheme();
   return (
     <Box
       sx={{
-        backgroundColor: "#212121",
+        backgroundColor: theme.palette.background.paper,
         width: "200px",
         height: "160px",
         padding: "2rem 1rem",

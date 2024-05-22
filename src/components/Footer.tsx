@@ -1,14 +1,15 @@
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import PlaceIcon from "@mui/icons-material/Place";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useTheme } from "@mui/material";
 
 const Footer = () => {
+  const theme = useTheme();
   return (
     <div>
       <Grid
         id="contact"
-        sx={{ background: "#8B422D" }}
+        sx={{ backgroundColor: theme.palette.background.default }}
         container
         spacing={4}
         alignItems="center"
@@ -33,7 +34,7 @@ const Footer = () => {
                 padding: "0.65rem",
               }}
             />
-            <p>Zahrakhodabakhshian@gmail.com</p>
+            <p>Zahrakhodabakhshian54@gmail.com</p>
           </Box>
           <Box
             display={"flex"}
@@ -82,7 +83,10 @@ const Footer = () => {
       <Typography
         variant="body1"
         align="center"
-        sx={{ margin: "0 auto", backgroundColor: "#8B422D" }}
+        sx={{
+          margin: "0 auto",
+          backgroundColor: theme.palette.background.default,
+        }}
       >
         Made with love by Zara
       </Typography>

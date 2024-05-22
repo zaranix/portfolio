@@ -7,6 +7,7 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  useTheme,
 } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
@@ -17,7 +18,9 @@ interface Props {
   toggleDarkMode: boolean;
   toggleDarkTheme: () => void;
 }
+
 const NavBar = ({ toggleDarkMode, toggleDarkTheme }: Props) => {
+  const theme = useTheme();
   const [state, setState] = useState(false);
 
   const scrollToExperience = (text: string) => {
@@ -62,7 +65,7 @@ const NavBar = ({ toggleDarkMode, toggleDarkTheme }: Props) => {
           sx={{
             width: "20rem",
             height: "100vh",
-            backgroundColor: "#212121",
+            backgroundColor: theme.palette.background.paper,
             borderTopRightRadius: "20px",
           }}
         >

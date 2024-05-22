@@ -47,8 +47,8 @@ const Education = () => {
       observerRef.current.observe(node);
     }
   }, []);
-  const them = useTheme();
-  const isXs = useMediaQuery(them.breakpoints.down("sm"));
+
+  const isXs = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <Grid
       id="education"

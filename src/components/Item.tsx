@@ -1,3 +1,5 @@
+import { useTheme } from "@mui/material";
+
 interface Props {
   date: string;
   title: string;
@@ -6,10 +8,11 @@ interface Props {
 }
 
 const Item = ({ date, title, school, imageUrl }: Props) => {
+  const theme = useTheme();
   return (
     <div
       style={{
-        background: "#8b422d",
+        background: theme.palette.primary.light,
         display: "flex",
         padding: "2rem",
         borderRadius: "15px",

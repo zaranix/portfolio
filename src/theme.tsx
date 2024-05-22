@@ -5,16 +5,18 @@ export const lightTheme = createTheme({
     mode: "light",
     primary: {
       main: "#EEEEEE",
+      light: "#F78A69",
     },
     secondary: {
       main: "#fff",
     },
 
     text: {
-      primary: "#000",
-      secondary: "#A7A7A7",
+      primary: "#151515",
+      secondary: "#818181",
     },
-    background: { default: "#F56539", paper: "#fff" },
+
+    background: { default: "#F78A69", paper: "#eee" },
   },
   typography: {
     fontFamily: "Roboto, sans-serif",
@@ -26,6 +28,7 @@ export const darkTheme = createTheme({
     mode: "dark",
     primary: {
       main: "#212121",
+      light: "#8E371D",
     },
     secondary: {
       main: "#EEEEEE",

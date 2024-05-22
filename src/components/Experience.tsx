@@ -1,10 +1,34 @@
-import { useTheme } from "@material-ui/core/styles";
-import { Grid, Grow } from "@mui/material";
+import { Grid, Grow, useTheme } from "@mui/material";
 import { useCallback, useRef, useState } from "react";
 import Item from "./Item";
 import educationorg from "/home/zaranix/portfolio/src/assets/Images/eduOrange.svg";
 import experience from "/home/zaranix/portfolio/src/assets/Images/exp.svg";
-
+const items = [
+  {
+    date: "Jul 2016 - Apr 2020",
+    title: "Insurance agent",
+    school: "Pasargad Insurance Agency",
+    imageUrl: experience,
+  },
+  {
+    date: "Oct 2020 - Oct 2021",
+    title: "Real estate agent",
+    school: "Dolati Real Estate Agency",
+    imageUrl: experience,
+  },
+  {
+    date: "Jun 2021 - Dec 2021",
+    title: "Front-end Developer (Internship)",
+    school: "Shahre Wordpress",
+    imageUrl: experience,
+  },
+  {
+    date: "Jul 2022 - Jul 2023",
+    title: "Front-end Developer",
+    school: "Kian Development Holding (Abzar Wordpress)",
+    imageUrl: experience,
+  },
+];
 const Experience = () => {
   const theme = useTheme();
   const [visible, setVisible] = useState(false);
@@ -33,33 +57,6 @@ const Experience = () => {
       observerRef.current.observe(node);
     }
   }, []);
-
-  const items = [
-    {
-      date: "Jul 2016 - Apr 2020",
-      title: "Insurance agent",
-      school: "Pasargad Insurance Agency",
-      imageUrl: experience,
-    },
-    {
-      date: "Oct 2020 - Oct 2021",
-      title: "Real estate agent",
-      school: "Dolati Real Estate Agency",
-      imageUrl: experience,
-    },
-    {
-      date: "Jun 2021 - Dec 2021",
-      title: "Front-end Developer (Internship)",
-      school: "Shahre Wordpress",
-      imageUrl: experience,
-    },
-    {
-      date: "Jul 2022 - Jul 2023",
-      title: "Front-end Developer",
-      school: "Kian Development Holding (Abzar Wordpress)",
-      imageUrl: experience,
-    },
-  ];
 
   return (
     <Grid
