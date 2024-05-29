@@ -6,15 +6,15 @@ import educationorg from "/home/zaranix/portfolio/src/assets/Images/eduOrange.sv
 
 const items = [
   {
-    date: "2014 - 2018",
-    title: "Bachelor of Science in Computer Engineering",
-    school: "University of Tehran",
+    date: "sep 2016 - Feb 2021",
+    title: "Bachelor’s Degree In Computer Engineering",
+    school: "Hamedan University of Technology",
     imageUrl: education,
   },
   {
-    date: "2018 - 2020",
-    title: "Master of Science in Computer Engineering",
-    school: "University of Tehran",
+    date: "Apr 2023 - ongoing",
+    title: "Master’s Degree In Computer Science ",
+    school: "RPTU University",
     imageUrl: education,
   },
 ];

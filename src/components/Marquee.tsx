@@ -1,4 +1,4 @@
-import { Box, Grid, useTheme } from "@mui/material";
+import { Grid, useTheme } from "@mui/material";
 import FastMarquee from "react-fast-marquee";
 import SkillBox from "./SkillBox";
 import css from "/home/zaranix/portfolio/src/assets/Images/css.svg";
@@ -19,21 +19,27 @@ const Skill = () => {
       id="skill"
       sx={{
         backgroundColor: theme.palette.background.paper,
-        height: "100vh",
+        height: "80vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
       }}
-      container
-      spacing={4}
     >
+      <h1 style={{ textAlign: "center", color: "#f56539", fontSize: "3rem" }}>
+        Skills
+      </h1>
       <FastMarquee>
-        <Box
+        <Grid
           sx={{
             display: "flex",
             alignItems: "center",
             flexDirection: "row-reverse",
-            padding: "5%",
+            padding: "3rem",
             gap: "3rem",
           }}
         >
+          {" "}
           <SkillBox skill={"HTML"} imageUrl={html} />
           <SkillBox skill={"CSS"} imageUrl={css} />
           <SkillBox skill={"JavaScript"} imageUrl={Javascript} />
@@ -44,7 +50,7 @@ const Skill = () => {
           <SkillBox skill={"Nginx"} imageUrl={nginx} />
           <SkillBox skill={"WordPress"} imageUrl={wordpress} />
           <SkillBox skill={"Git"} imageUrl={git} />
-        </Box>
+        </Grid>
       </FastMarquee>
     </Grid>
   );

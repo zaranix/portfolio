@@ -9,7 +9,7 @@ const Footer = () => {
     <div>
       <Grid
         id="contact"
-        sx={{ backgroundColor: theme.palette.background.default }}
+        sx={{ backgroundColor: theme.palette.primary.light }}
         container
         spacing={4}
         alignItems="center"
@@ -85,7 +85,7 @@ const Footer = () => {
         align="center"
         sx={{
           margin: "0 auto",
-          backgroundColor: theme.palette.background.default,
+          backgroundColor: theme.palette.primary.light,
         }}
       >
         Made with love by Zara
